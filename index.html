@@ -39,9 +39,31 @@
         <div id="discussion-display"></div>
     </div>
 
+    <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+
+    <!-- Firebase Config -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB9eFVYbbZQscMrf2Bni9lw01DJoYOlGk4",
+            authDomain: "unspoken-words-33bd9.firebaseapp.com",
+            projectId: "unspoken-words-33bd9",
+            storageBucket: "unspoken-words-33bd9.firebasestorage.app",
+            messagingSenderId: "440230472435",
+            appId: "1:440230472435:web:cc3f9bd06bc6e5bad1a586",
+            measurementId: "G-HGKQJRRYFN"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const database = firebase.database();
+    </script>
+
+    <!-- Your Custom Script -->
     <script src="script.js"></script>
 </body>
 </html>
+
