@@ -3,17 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mental Health Website</title>
+    <title>Unspoken Words - Mental Health</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to Your Safe Space</h1>
-    <section>
-        <h2>Journal Your Thoughts</h2>
-        <form id="journal-form">
-            <textarea placeholder="Write here..." id="journal-entry"></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+    <div id="auth-container">
+        <h2>Welcome to Unspoken Words</h2>
+        <div id="login-form">
+            <h3>Login</h3>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="login()">Log In</button>
+        </div>
+        <div id="register-form">
+            <h3>Register</h3>
+            <input type="email" id="email-reg" placeholder="Email" required>
+            <input type="password" id="password-reg" placeholder="Password" required>
+            <button onclick="register()">Register</button>
+        </div>
+    </div>
+
+    <div id="feeling-container" style="display:none;">
+        <h3>Your Journal Entry</h3>
+        <textarea id="feeling-input" placeholder="Write your feeling here..." required></textarea>
+        <button onclick="saveFeeling()">Save Feeling</button>
+        
+        <div id="feelings-display"></div>
+    </div>
+
+    <div id="discussion-container">
+        <h3>Group Discussions</h3>
+        <textarea id="discussion-input" placeholder="Start a discussion..." required></textarea>
+        <button onclick="postDiscussion()">Post Discussion</button>
+
+        <div id="discussion-display"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
